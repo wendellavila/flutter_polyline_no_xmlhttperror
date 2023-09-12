@@ -7,11 +7,14 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
-Workaround for [flutter_polyline_points](https://pub.dev/packages/flutter_polyline_points) on Flutter Web
+# flutter_polyline_no_xmlhttperror
+Workaround for using [flutter_polyline_points](https://pub.dev/packages/flutter_polyline_points) on Flutter Web.
 
 ## Features
-Uses Maps JS API on Flutter Web to retrieve coordinates, avoiding XMLHttpRequest errors caused by flutter_polyline_points.
+This package uses [google_maps](https://pub.dev/packages/google_maps) on Flutter Web to retrieve coordinates, avoiding [XMLHttpRequest errors](https://github.com/Dammyololade/flutter_polyline_points/issues/78#issuecomment-1705554890) caused by flutter_polyline_points.
 On other platforms, flutter_polyline_points is used as usual.
+
+Currently, only _getRouteBetweenCoordinates_ is supported.
 
 ## Getting started
 Add package to pubspec.yaml:
@@ -36,5 +39,8 @@ LatLng destination = LatLng(37.75098221997195, -122.50814232027015);
 
 PolylinePoints polylineGenerator = PolylinePoints(googleAPIKey);
 List<LatLng> polylineCoordinates =
-    await polylineGenerator.getPolylinePoints(origin, destination);
+    await polylineGenerator.getRouteBetweenCoordinates(origin, destination);
 ```
+
+## Notes
+You need to add a [Google Maps API key](https://pub.dev/packages/google_maps_flutter) to your project in order to use this package.
