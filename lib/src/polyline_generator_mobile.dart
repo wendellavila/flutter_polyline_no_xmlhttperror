@@ -3,7 +3,7 @@ import 'package:flutter_polyline_points/flutter_polyline_points.dart'
     as polyline_points;
 
 class PolylineGenerator {
-  String googleAPIKey = ""; //Your Google Maps API key
+  late String googleAPIKey; //Your Google Maps API key
 
   PolylineGenerator(this.googleAPIKey);
 
