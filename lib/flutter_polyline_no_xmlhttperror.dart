@@ -9,9 +9,10 @@ class PolylinePoints {
 
   PolylinePoints(this.googleAPIKey);
 
-  Future<List<maps.LatLng>> getPolylinePoints(
+  Future<List<maps.LatLng>> getRouteBetweenCoordinates(
       maps.LatLng origin, maps.LatLng destination) async {
     PolylineGenerator polylineGenerator = PolylineGenerator(googleAPIKey);
-    return await polylineGenerator.getPolylinePoints(origin, destination);
+    return await polylineGenerator.getRouteBetweenCoordinates(
+        origin, destination);
   }
 }

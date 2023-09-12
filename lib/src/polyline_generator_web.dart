@@ -8,7 +8,7 @@ class PolylineGenerator {
   //polyline_generator_mobile on conditional import
   PolylineGenerator(String googleAPIKey);
 
-  Future<List<maps.LatLng>> getPolylinePoints(
+  Future<List<maps.LatLng>> getRouteBetweenCoordinates(
       maps.LatLng origin, maps.LatLng destination) async {
     //Converting from google_maps_flutter/LatLng to google_maps/LatLng
     maps_js.LatLng originConverted =

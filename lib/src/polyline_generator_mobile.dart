@@ -7,7 +7,7 @@ class PolylineGenerator {
 
   PolylineGenerator(this.googleAPIKey);
 
-  Future<List<maps.LatLng>> getPolylinePoints(
+  Future<List<maps.LatLng>> getRouteBetweenCoordinates(
       maps.LatLng origin, maps.LatLng destination) async {
     polyline_points.PolylinePoints polylinePoints =
         polyline_points.PolylinePoints();
