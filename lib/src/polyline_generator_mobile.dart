@@ -2,10 +2,10 @@ import 'package:google_maps_flutter/google_maps_flutter.dart' as maps;
 import 'package:flutter_polyline_points/flutter_polyline_points.dart'
     as polyline_points;
 
-class PolylineGeneratorMobile {
+class PolylineGenerator {
   String googleAPIKey = ""; //Your Google Maps API key
 
-  PolylineGeneratorMobile(this.googleAPIKey);
+  PolylineGenerator(this.googleAPIKey);
 
   Future<List<maps.LatLng>> getPolylinePoints(
       maps.LatLng origin, maps.LatLng destination) async {

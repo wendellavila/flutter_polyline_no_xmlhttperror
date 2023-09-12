@@ -2,22 +2,21 @@ library flutter_polyline_no_xmlhttperror;
 
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:google_maps_flutter/google_maps_flutter.dart' as maps;
-import 'package:flutter_polyline_no_xmlhttperror/src/polyline_generator_mobile.dart';
-import 'package:flutter_polyline_no_xmlhttperror/src/polyline_generator_web.dart';
+import 'package:flutter_polyline_no_xmlhttperror/src/polyline_generator_mobile.dart'
+    if (dart.library.html) 'package:flutter_polyline_no_xmlhttperror/src/polyline_generator_web.dart';
 
-class PolylineGenerator {
+class PolylinePoints {
   String googleAPIKey = "";
 
-  PolylineGenerator(this.googleAPIKey);
+  PolylinePoints(this.googleAPIKey);
 
   Future<List<maps.LatLng>> getPolylinePoints(
       maps.LatLng origin, maps.LatLng destination) async {
     if (kIsWeb) {
-      PolylineGeneratorWeb polylineGenerator = PolylineGeneratorWeb();
+      PolylineGenerator polylineGenerator = PolylineGenerator(googleAPIKey);
       return await polylineGenerator.getPolylinePoints(origin, destination);
     } else {
-      PolylineGeneratorMobile polylineGenerator =
-          PolylineGeneratorMobile(googleAPIKey);
+      PolylineGenerator polylineGenerator = PolylineGenerator(googleAPIKey);
       return await polylineGenerator.getPolylinePoints(origin, destination);
     }
   }

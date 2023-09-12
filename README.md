@@ -24,7 +24,7 @@ dependencies:
 ```
 
 ## Usage
-```
+```dart
 import 'package:flutter_polyline_no_xmlhttperror/flutter_polyline_no_xmlhttperror.dart'
 ```
 
@@ -35,5 +35,6 @@ LatLng origin = LatLng(0, 0);
 LatLng destination = LatLng(1, 1);
 
 PolylineGenerator polylineGenerator = PolylineGenerator(googleAPIKey);
-polylineGenerator.getPolylinePoints(origin, destination);
+List<LatLng> polylineCoordinates =
+    await polylineGenerator.getPolylinePoints(origin, destination);
 ```

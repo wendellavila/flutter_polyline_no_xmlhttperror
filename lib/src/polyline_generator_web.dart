@@ -3,7 +3,11 @@ import 'package:google_maps/google_maps.dart' as maps_js;
 import 'package:flutter_polyline_points/flutter_polyline_points.dart'
     as polyline_points;
 
-class PolylineGeneratorWeb {
+class PolylineGenerator {
+  String googleAPIKey = ""; //Your Google Maps API key
+
+  PolylineGenerator(this.googleAPIKey);
+
   Future<List<maps.LatLng>> getPolylinePoints(
       maps.LatLng origin, maps.LatLng destination) async {
     //Converting from google_maps_flutter/LatLng to google_maps/LatLng
