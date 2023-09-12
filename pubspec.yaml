@@ -1,6 +1,6 @@
 name: flutter_polyline_no_xmlhttperror
 description: Workaround for flutter_polyline_points on Flutter Web
-version: 0.0.2
+version: 1.0.0
 homepage:
 
 environment:
