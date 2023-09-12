@@ -10,7 +10,7 @@ and the Flutter guide for
 Workaround for flutter_polyline_points on Flutter Web
 
 ## Features
-Uses Maps JS API on web to retrieve coordinates, avoiding XMLHttpRequest errors caused by flutter_polyline_points.
+Uses Maps JS API on Flutter Web to retrieve coordinates, avoiding XMLHttpRequest errors caused by flutter_polyline_points.
 On other platforms, flutter_polyline_points is used as usual.
 
 ## Getting started
@@ -31,10 +31,10 @@ import 'package:flutter_polyline_no_xmlhttperror/flutter_polyline_no_xmlhttperro
 ```dart
 String googleAPIKey = ""; //Your Google API Key
 
-LatLng origin = LatLng(0, 0);
-LatLng destination = LatLng(1, 1);
+LatLng origin = LatLng(37.769904068414945, -122.44706008798406);
+LatLng destination = LatLng(37.75098221997195, -122.50814232027015);
 
-PolylineGenerator polylineGenerator = PolylineGenerator(googleAPIKey);
+PolylinePoints polylineGenerator = PolylinePoints(googleAPIKey);
 List<LatLng> polylineCoordinates =
     await polylineGenerator.getPolylinePoints(origin, destination);
 ```
