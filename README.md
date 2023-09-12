@@ -7,7 +7,7 @@ For general information about developing packages, see the Dart guide for
 and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
-Workaround for flutter_polyline_points on Flutter Web
+Workaround for [flutter_polyline_points](https://pub.dev/packages/flutter_polyline_points) on Flutter Web
 
 ## Features
 Uses Maps JS API on Flutter Web to retrieve coordinates, avoiding XMLHttpRequest errors caused by flutter_polyline_points.
