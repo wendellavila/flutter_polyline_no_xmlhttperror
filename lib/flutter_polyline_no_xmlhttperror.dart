@@ -11,7 +11,7 @@ class PolylineGenerator {
   PolylineGenerator(this.googleAPIKey);
 
   Future<List<maps.LatLng>> getPolylinePoints(
-      maps.LatLng origin, maps.LatLng destination, String googleAPIKey) async {
+      maps.LatLng origin, maps.LatLng destination) async {
     if (kIsWeb) {
       PolylineGeneratorWeb polylineGenerator = PolylineGeneratorWeb();
       return await polylineGenerator.getPolylinePoints(origin, destination);
