@@ -15,7 +15,7 @@ On other platforms, flutter_polyline_points is used as usual.
 
 ## Getting started
 Add package to pubspec.yaml:
-```
+```yaml
 dependencies:
     flutter_polyline_no_xmlhttperror:
         git:
